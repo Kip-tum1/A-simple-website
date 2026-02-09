@@ -8,7 +8,6 @@ const projects = [
     id: 1,
     title: "E-Commerce Dashboard",
     description: "Full-featured admin panel with real-time analytics, product management, and order tracking.",
-    // tech: ["React", "Tailwind"],
     githubUrl: "https://github.com/Kip-tum1/My-Resume.git",
     image: Group
   },
@@ -16,15 +15,13 @@ const projects = [
     id: 2,
     title: "To-List",
     description: "Clean, high-conversion todo-landing page with smooth animations and mobile design.",
-    // tech: ["H", "Tailwind", "Framer Motion", "TypeScript"],
     githubUrl: "https://github.com/Kip-tum1/dynamic-to-do-list-js.git",
     image: Todo
   },
   {
     id: 3,
     title: "Portfolio",
-    description: "Beautiful portfolio landing page with beautiful animations and first mobile designs.",
-    // tech: ["React", "Redux Toolkit", "Tailwind", "localForage"],
+    description: "Beautiful portfolio landing page with beautiful animations and first mobile designs.",    
     githubUrl: "https://github.com/Kip-tum1/A-simple-website.git",
     image: Portfolio
   },
@@ -50,17 +47,17 @@ export default function Projects() {
               key={project.id}
               className="group relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200 dark:border-gray-700"
             >
-              {/* Image container */}
+
               <div className="relative h-56 sm:h-64 overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                {/* Overlay gradient */}
+         
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
                 
-                {/* GitHub button - appears on hover */}
+      
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <a
                     href={project.githubUrl}
@@ -81,26 +78,13 @@ export default function Projects() {
                 </div>
               </div>
 
-              {/* Content */}
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                   {project.title}
                 </h3>
                 
                 <p className="mt-3 text-gray-600 dark:text-gray-300 line-clamp-3">
-                  {project.description}
-                </p>
-
-                {/* <div className="mt-5 flex flex-wrap gap-2">
-                  {project.tech.map((tag) => (
-                    <span
-                      key={tag}
-                      className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-indigo-50 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300 border border-indigo-100 dark:border-indigo-800/50"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div> */}
+                  {project.description}  </p>               
               </div>
             </div>
           ))}
