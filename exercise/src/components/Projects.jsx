@@ -8,23 +8,23 @@ const projects = [
     id: 1,
     title: "E-Commerce Dashboard",
     description: "Full-featured admin panel with real-time analytics, product management, and order tracking.",
-    tech: ["React", "Tailwind", "Chart.js", "Firebase"],
+    // tech: ["React", "Tailwind"],
     githubUrl: "https://github.com/Kip-tum1/My-Resume.git",
     image: Group
   },
   {
     id: 2,
     title: "To-List",
-    description: "Clean, high-conversion landing page with smooth animations and mobile-first design.",
-    tech: ["Next.js", "Tailwind", "Framer Motion", "TypeScript"],
+    description: "Clean, high-conversion todo-landing page with smooth animations and mobile design.",
+    // tech: ["H", "Tailwind", "Framer Motion", "TypeScript"],
     githubUrl: "https://github.com/Kip-tum1/dynamic-to-do-list-js.git",
     image: Todo
   },
   {
     id: 3,
     title: "Portfolio",
-    description: "Beautiful task manager with drag & drop, dark mode, categories and priority system.",
-    tech: ["React", "Redux Toolkit", "Tailwind", "localForage"],
+    description: "Beautiful portfolio landing page with beautiful animations and first mobile designs.",
+    // tech: ["React", "Redux Toolkit", "Tailwind", "localForage"],
     githubUrl: "https://github.com/Kip-tum1/A-simple-website.git",
     image: Portfolio
   },
@@ -91,7 +91,7 @@ export default function Projects() {
                   {project.description}
                 </p>
 
-                <div className="mt-5 flex flex-wrap gap-2">
+                {/* <div className="mt-5 flex flex-wrap gap-2">
                   {project.tech.map((tag) => (
                     <span
                       key={tag}
@@ -100,7 +100,7 @@ export default function Projects() {
                       {tag}
                     </span>
                   ))}
-                </div>
+                </div> */}
               </div>
             </div>
           ))}
