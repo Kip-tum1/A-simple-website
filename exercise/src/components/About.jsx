@@ -1,5 +1,5 @@
 
-import AboutImage from "../assets/photo.png";
+import AboutImage from "../assets/coding.jpg";
 
 const About = () => {
   return (
@@ -10,7 +10,7 @@ const About = () => {
           <img
             src={AboutImage}
             alt=""
-            className="w-72 h-80 rounded object-cover mb-8 md:mb-0"
+            className="w-100 h-80 rounded object-cover mb-8 md:mb-0"
           />
           <div className="flex-1">
             <p className="text-lg mb-8">

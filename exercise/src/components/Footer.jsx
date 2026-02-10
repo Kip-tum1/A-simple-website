@@ -3,12 +3,12 @@ import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#3b6264] text-white py-8">
+    <footer className="bg-white text-black py-8">
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
         <div className="flex flex-col md:flex-row md:space-x-12 items-center mb-4">
           <div className="flex-1 mb-4 md:mb-0">
-            <h3 className="text-2xl font-bold mb-2">Duncan</h3>
-            <p className="text-white">
+            <h3 className="text-2xl font-bold mb-2 text-center">Duncan</h3>
+            <p className="text-[3b6264] text-center">
              Skilled in crafting elegant static websites and modern web applications while following current best coding practices.
             </p>
           </div>
@@ -19,7 +19,7 @@ const Footer = () => {
                 placeholder="Your email"
                 // className="w-full p-2 rounded-l-lg bg-gray-800 border border-gray-600 
                 // focus:outline-none focus:border-green-400"
-                 className='bg-white w-full p-2 rounded border-gray-600 focus:outline-none
+                 className='bg-blue-100 text-black w-full p-2 rounded border-gray-600 focus:outline-none
                      focus:border-green-400 text-black'
               />
               <button
@@ -38,7 +38,7 @@ const Footer = () => {
           className="border-t border-gray-600 pt-4 flex flex-col md:flex-row 
           justify-between items-center"
         >
-          <p className="text-white">
+          <p className="text-black">
             &copy; {new Date().getFullYear()} © KiptumDun. All rights reserved.
           </p>
           <div className="flex space-x-4 my-4 md:my-0">
@@ -63,7 +63,7 @@ const Footer = () => {
 // Posted by Luke Storry, modified by community. See post 'Timeline' for change history
 // Retrieved 2026-02-07, License - CC BY-SA 4.0
 
-         className="underline text-white hover:text-blue-800 visited:text-purple-600"
+         className="underline text-black hover:text-blue-800 visited:text-purple-600"
 >
               Terms of Service
             </a>
