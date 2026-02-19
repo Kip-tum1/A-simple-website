@@ -4,33 +4,46 @@ import HeroImage from '../assets/photo.png';
 
 const Hero = () => {
   return (
-    <div className='bg-[#3b6264] text-white text-center py-16'>
+    <div className='bg-[#f4f3f2] text-white text-center py-16'>
         <img src={HeroImage} alt="" 
         className='mx-auto mb-8 w-48 h-48 rounded-full object-cover transform 
         transition-transform duration-300 hover:scale-105'/>
-        <h1 className='text-4xl font-bold'>
+        <h1 className='text-4xl font-bold text-black'>
             I'm {" "}
             <span className='text-black'>Duncan Kiptum</span>
-            , Frontend Developer
+            <span className='text-black'> Frontend Developer</span>
+            
         </h1>
-        <p className='mt-4 text-lg text-white'>
+        <p className='mt-4 text-lg text-black'>
             I specialize in building modern and responsive web applications.
         </p>
-        <div className='mt-8 space-x-4'>
-            <a href='#contact'
-            className='bg-gradient-to-r from-green-400 to-blue-500 text-white
-            transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-xl'>Contact With Me</a>
-            {/* <a
-            href="#contact"
-            className="bg-black text-white px-6 py-2 rounded-full hover:scale-105 transform transition-transform duration-300"
-          >
-            Contact Me
+        <div className='m-8'>
+          {/* <a href='contact' className='bg-black tect-white px-4 py-2 rounded-xl m-4 transform transition-all duration-300
+      no-underline hover:bg-gray-800 hover:text-gray-200 hover:scale-10'>
+            Contact
           </a> */}
-            <button
-            className='bg-gradient-to-r from-pink-500 to-yellow-500 text-white
-            transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-xl'>Resume</button>
-        </div>
 
+            <a
+    href="#contact"
+    className="
+      inline-block bg-black text-white px-3 py-2 rounded-xl 
+      hover:bg-gray-800 hover:text-gray-200 hover:scale-105 
+      transform transition-all duration-300
+      no-underline
+    "
+  >
+    Contact Me
+  </a>
+          <button className='className="
+      inline-block bg-black text-black ml-3 px-3 py-2 rounded-xl 
+      hover:bg-gray-800 hover:text-black hover:scale-105 
+      transform transition-all duration-300
+      no-underline
+    "'>
+            Resume
+          </button>
+         
+        </div>
     </div>
   )
 }

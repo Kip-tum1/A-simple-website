@@ -4,14 +4,14 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-[#3b6264] text-white px-4 md:px-16 lg:px-24">
+    <nav className="bg-[#f4f3f2] px-4 md:px-16 lg:px-24">
       <div className="container mx-auto py-4 flex justify-between items-center">
 
-        <div className="text-2xl font-bold">DUNCAN</div>
+        <div className="text-2xl text-black font-bold">DUNCAN</div>
 
-
+{/* 
         <div className="hidden md:flex items-center space-x-8">
-          <a href="#home" className="hover:text-gray-300 transition-colors">
+          <a href="#home" className="text-black hover:text-gray-300">
             Home
           </a>
           <a href="#about" className="hover:text-gray-300 transition-colors">
@@ -20,17 +20,46 @@ const NavBar = () => {
           <a href="#service" className="hover:text-gray-300 transition-colors">
             Services
           </a>
+          <a href="#projects" className="hover:text-gray-300 transition-colors">
+            Projects
+          </a>
           <a
             href="#contact"
             className="bg-black text-white px-6 py-2 rounded-full hover:scale-105 transform transition-transform duration-300"
           >
             Contact Me
           </a>
-        </div>
+        </div> */}
+
+        <div className="hidden md:flex items-center space-x-8">
+  <a href="#home" className="text-black hover:text-gray-300 no-underline transition-colors">
+    Home
+  </a>
+  <a href="#about" className="text-black hover:text-gray-300 no-underline transition-colors">
+    About Me
+  </a>
+  <a href="#service" className="text-black hover:text-gray-300 no-underline transition-colors">
+    Services
+  </a>
+  <a href="#projects" className="text-black hover:text-gray-300 no-underline transition-colors">
+    Projects
+  </a>
+  <a
+    href="#contact"
+    className="
+      inline-block bg-black text-white px-3 py-2 rounded-xl
+      hover:bg-gray-800 hover:text-gray-200 hover:scale-105 
+      transform transition-all duration-300
+      no-underline
+    "
+  >
+    Contact Me
+  </a>
+</div>
 
 
         <button
-          className="bg-[#3b6264] md:hidden focus:outline-none "
+          className="bg-W md:hidden focus:outline-none "
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
@@ -50,7 +79,7 @@ const NavBar = () => {
           </svg>
         </button>
       </div>
-
+   {/* MOBILE RESPONSIBLE */}
 
       <div
         className={`
@@ -85,7 +114,7 @@ const NavBar = () => {
           </a>
           <a
             href="#contact"
-            className="bg-black text-white px-6 py-3 rounded-full hover:scale-105 transform transition-transform duration-300 mx-auto w-fit"
+            className="bg-white text-black px-6 py-3 rounded-full hover:scale-105 transform transition-transform duration-300 mx-auto w-fit" 
             onClick={() => setIsOpen(false)}
           >
             Contact Me

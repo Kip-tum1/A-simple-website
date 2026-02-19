@@ -3,9 +3,9 @@ import AboutImage from "../assets/coding.jpg";
 
 const About = () => {
   return (
-    <div className="bg-[#3b6264] text-white py-20" id="about">
+    <div className="bg-[#f9f8f7] text-black py-20" id="about">
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
-        <h2 className="text-4xl font-bold text-center mb-12">About Me</h2>
+        <h2 className="text-4xl text-black font-bold text-center mb-12">About Me</h2>
         <div className="flex flex-col md:flex-row items-center md:space-x-12">
           <img
             src={AboutImage}
@@ -13,12 +13,12 @@ const About = () => {
             className="w-100 h-80 rounded object-cover mb-8 md:mb-0"
           />
           <div className="flex-1">
-            <p className="text-lg mb-8">
+            <p className="text-lg text-blackmb-8">
               A versatile frontend engineer experienced in building applications with diverse tech stacks, and highly open to picking up new technologies.
             </p>
             <div className="space-y-4">
               <div className="flex items-center">
-                <label htmlFor="htmlandcss" className="w-2/12">
+                <label htmlFor="htmlandcss" className="w-2/12 text-black">
                   HTML & CSS
                 </label>
                 <div className="grow bg-gray-800 rounded-full h-2.5">
@@ -29,7 +29,7 @@ const About = () => {
                 </div>
               </div>
               <div className="flex items-center">
-                <label htmlFor="htmlandcss" className="w-2/12">
+                <label htmlFor="htmlandcss" className="w-2/12 text-black">
                   Javascript
                 </label>
                 <div className="grow bg-gray-800 rounded-full h-2.5">
@@ -40,7 +40,7 @@ const About = () => {
                 </div>
               </div>
               <div className="flex items-center">
-                <label htmlFor="htmlandcss" className="w-2/12">
+                <label htmlFor="htmlandcss" className="w-2/12 text-black">
                   React JS
                 </label>
                 <div className="grow bg-gray-800 rounded-full h-2.5">
@@ -64,21 +64,21 @@ const About = () => {
             </div>
             <div className="mt-12 flex justify-between text-center">
                 <div>
-                    <h3 className="text-2xl font-bold text-transparent bg-clip-text 
+                    <h3 className="text-2xl font-bold text-grey-800 bg-clip-text 
                 bg-gradient-to-r from-green-400 to-blue-500">
                         1+
                     </h3>
                     <p>Years Experience</p>
                 </div>
                 <div>
-                    <h3 className="text-2xl font-bold text-transparent bg-clip-text 
+                    <h3 className="text-2xl font-bold text-grey-800 bg-clip-text 
                 bg-gradient-to-r from-green-400 to-blue-500">
                         10+
                     </h3>
                     <p>Projects Completed</p>
                 </div>
                 <div>
-                    <h3 className="text-2xl font-bold text-transparent bg-clip-text 
+                    <h3 className="text-2xl font-bold text-grey-800 bg-clip-text 
                 bg-gradient-to-r from-green-400 to-blue-500">
                         5+
                     </h3>
