@@ -1,53 +1,60 @@
-
 const services = [
-  {
-    id: 1,
-    title: "Web Design",
-    description: "Creating visually appealing and user-friendly web designs.",
-  },
-  {
-    id: 2,
-    title: "Frontend Development",
-    description: "Building responsive and interactive user interfaces.",
-  },
+    { id: 1, title: "Frontend Development", description: "Building modern, responsive web applications with React, Next.js, TypeScript, and the latest frontend technologies.", icon: "code" },
+    { id: 2, title: "UI Implementation", description: "Pixel-perfect implementation of designs with attention to detail, animations, and user experience.", icon: "layout" },
+    { id: 5, title: "Code Review & Optimization", description: "Comprehensive code reviews and performance optimization to improve quality and user experience.", icon: "search" },
+  ]
+    
 
-  {
-    id: 3,
-    title: "Ui/Ux Designer",
-    description: "Mobile app Design, Website Design and Provision off all the images used in Desins"
-  },
 
-];
-const Service = () => {
+function Services() {
   return (
-    <div className="bg-[#f4f3f2] text-white py-20" id="service">
-      <div className="container mx-auto px-8 md:px-16 lg:px-24">
-        <h2 className="text-4xl font-bold text-center text-black mb-12">My Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service) => (
-            <div
-              key={service.id}
-              className="bg-gray-800 text-whites px-6 pb-6 rounded-lg hover:shadow-lg transform 
-              transition-transform duration-300 hover:scale-105"
-            >
-              {/* <div
-                className="text-right text-2xl font-bold text-white bg-clip-text 
-              bg-gradient-to-r from-green-600 to-blue-400"
-              >
-                {service.id}
-              </div> */}
-              <h3 className="mt-2 text-2xl font-bold text-white bg-clip-text 
-              bg-gradient-to-r from-green-400 to-blue-500">
-                {service.title}
-              </h3>
-              <p className="mt-2 text-gray-300">{service.description}</p>
-              {/* <a href="#" className="mt-4 inline-block text-green-400 hover:text-blue-500">Read More</a> */}
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
 
-export default Service;
+    <section id="services" className="services-section py-24 bg-zinc-950 text-white">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <div className="section-label inline-block mb-3 px-5 py-1.5 text-sm font-medium tracking-widest uppercase border border-zinc-700 rounded-full bg-zinc-900/50">
+           What I Offer
+          </div>
+      
+          <h2 className="section-title text-5xl md:text-6xl font-bold tracking-tighter mb-6">
+           Services
+          </h2>
+      
+          <p className="section-desc max-w-2xl mx-auto text-lg text-zinc-400">
+            Comprehensive solutions tailored to your needs, from frontend development to technical workshops.
+          </p>
+        </div>
+        <div  className="services-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map(service=> (
+                <div className="service-card" key={service.id}>
+                    <div className="service-title text-2xl font-semibold mb-4 tracking-tight">{service.title}</div>
+                    <div  className="service-desc text-zinc-400 leading-relaxed">{service.description}</div>
+                </div>))}
+       </div>
+        {/* <div>
+          {data.services.map((s) => (<div key={s.id}  className="service-card group relative bg-zinc-900 border border-zinc-800 rounded-3xl p-8 transition-all duration-300 hover:border-zinc-700 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/50" >
+
+          <div className="service-icon mb-6 w-14 h-14 flex items-center justify-center bg-zinc-800 rounded-2xl text-blue-400 group-hover:scale-110 transition-transform duration-300">
+            <Icon name={s.icon} size={22} />
+          </div>
+
+
+          <div className="service-title text-2xl font-semibold mb-4 tracking-tight">
+            {s.title}
+          </div>
+
+
+          <div className="service-desc text-zinc-400 leading-relaxed">
+            {s.description}
+          </div>
+        </div>
+      ))}
+    </div> */}
+  </div>
+</section>
+    
+    
+  );
+}
+
+export default Services;

@@ -1,94 +1,97 @@
-
 import AboutImage from "../assets/coding.jpg";
 
 const About = () => {
+  const skills = [
+    { name: "HTML & CSS", level: "90%" },
+    { name: "JavaScript", level: "88%" },
+    { name: "React JS", level: "92%" },
+    { name: "Python", level: "75%" },
+  ];
+
+  const stats = [
+    { number: "1+", label: "Years Experience" },
+    { number: "10+", label: "Projects Completed" },
+    { number: "5+", label: "Happy Clients" },
+  ];
+
   return (
-    <div className="bg-[#f9f8f7] text-black py-20" id="about">
-      <div className="container mx-auto px-8 md:px-16 lg:px-24">
-        <h2 className="text-4xl text-black font-bold text-center mb-12">About Me</h2>
-        <div className="flex flex-col md:flex-row items-center md:space-x-12">
-          <img
-            src={AboutImage}
-            alt=""
-            className="w-100 h-80 rounded object-cover mb-8 md:mb-0"
-          />
-          <div className="flex-1">
-            <p className="text-lg text-blackmb-8">
-              A versatile frontend engineer experienced in building applications with diverse tech stacks, and highly open to picking up new technologies.
-            </p>
-            <div className="space-y-4">
-              <div className="flex items-center">
-                <label htmlFor="htmlandcss" className="w-2/12 text-black">
-                  HTML & CSS
-                </label>
-                <div className="grow bg-gray-800 rounded-full h-2.5">
-                  <div
-                    className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full 
-                    transform transition-transform duration-300 hover:scale-105 w-10/12"
-                  ></div>
-                </div>
+    <section id="about" className="py-24 md:py-32 bg-zinc-950 text-white relative overflow-hidden">
+      {/* Background accent */}
+      <div className="absolute inset-0 bg-[radial-gradient(at_bottom_left,#14b8a6_0%,transparent_70%)] opacity-10 pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+          {/* Left - Image */}
+          <div className="relative group">
+            <div className="absolute -inset-4 bg-gradient-to-br from-teal-400 via-cyan-500 to-transparent opacity-20 rounded-[3rem] blur-3xl group-hover:opacity-30 transition-opacity" />
+            
+            <img
+              src={AboutImage}
+              alt="Duncan Kiptum - Frontend Engineer"
+              className="w-full rounded-3xl shadow-2xl object-cover aspect-[4/3] lg:aspect-square relative z-10 border border-zinc-800"
+            />
+            
+            {/* Decorative corner accent */}
+            <div className="absolute -bottom-3 -right-3 w-24 h-24 border border-teal-400/30 rounded-2xl z-20" />
+          </div>
+
+          {/* Right - Content */}
+          <div className="space-y-12">
+            <div>
+              <div className="inline-flex items-center gap-3 px-5 py-2 bg-white/5 border border-white/10 rounded-full mb-6">
+                <span className="text-teal-400">👨‍💻</span>
+                <span className="uppercase text-xs font-semibold tracking-[3px] text-zinc-400">MY STORY</span>
               </div>
-              <div className="flex items-center">
-                <label htmlFor="htmlandcss" className="w-2/12 text-black">
-                  Javascript
-                </label>
-                <div className="grow bg-gray-800 rounded-full h-2.5">
-                  <div
-                    className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full 
-                    transform transition-transform duration-300 hover:scale-105 w-10/12"
-                  ></div>
-                </div>
-              </div>
-              <div className="flex items-center">
-                <label htmlFor="htmlandcss" className="w-2/12 text-black">
-                  React JS
-                </label>
-                <div className="grow bg-gray-800 rounded-full h-2.5">
-                  <div
-                    className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full 
-                    transform transition-transform duration-300 hover:scale-105 w-11/12"
-                  ></div>
-                </div>
-              </div>
-              <div className="flex items-center">
-                <label htmlFor="htmlandcss" className="w-2/12">
-                  Python
-                </label>
-                <div className="grow bg-gray-800 rounded-full h-2.5">
-                  <div
-                    className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full 
-                    transform transition-transform duration-300 hover:scale-105 w-9/12"
-                  ></div>
-                </div>
-              </div>
+              
+              <h2 className="text-5xl md:text-6xl font-bold tracking-tighter bg-gradient-to-br from-white to-zinc-300 bg-clip-text text-transparent">
+                About Me
+              </h2>
             </div>
-            <div className="mt-12 flex justify-between text-center">
-                <div>
-                    <h3 className="text-2xl font-bold text-grey-800 bg-clip-text 
-                bg-gradient-to-r from-green-400 to-blue-500">
-                        1+
-                    </h3>
-                    <p>Years Experience</p>
+
+            <div className="text-zinc-400 text-[17px] leading-relaxed max-w-2xl">
+              A versatile frontend engineer passionate about building elegant, high-performance web applications. 
+              I thrive on working with diverse tech stacks and I'm always excited to learn new technologies and frameworks.
+            </div>
+
+            {/* Skills Section */}
+            <div className="space-y-7">
+              <h3 className="text-xl font-semibold text-white mb-6">Technical Skills</h3>
+              
+              {skills.map((skill, index) => (
+                <div key={index} className="flex items-center gap-6 group">
+                  <div className="w-36 text-sm font-medium text-zinc-400 group-hover:text-teal-400 transition-colors">
+                    {skill.name}
+                  </div>
+                  <div className="flex-1 bg-zinc-900 rounded-full h-2.5 overflow-hidden">
+                    <div
+                      className="h-2.5 bg-gradient-to-r from-teal-400 to-cyan-500 rounded-full transition-all duration-700 group-hover:scale-x-105 origin-left"
+                      style={{ width: skill.level }}
+                    />
+                  </div>
+                  <div className="w-12 text-right text-sm font-mono text-teal-400">
+                    {skill.level}
+                  </div>
                 </div>
-                <div>
-                    <h3 className="text-2xl font-bold text-grey-800 bg-clip-text 
-                bg-gradient-to-r from-green-400 to-blue-500">
-                        10+
-                    </h3>
-                    <p>Projects Completed</p>
+              ))}
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-8 pt-8 border-t border-zinc-800">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center group">
+                  <div className="text-5xl font-bold bg-gradient-to-br from-teal-400 to-cyan-400 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
+                    {stat.number}
+                  </div>
+                  <p className="text-zinc-400 mt-3 text-sm uppercase tracking-widest">
+                    {stat.label}
+                  </p>
                 </div>
-                <div>
-                    <h3 className="text-2xl font-bold text-grey-800 bg-clip-text 
-                bg-gradient-to-r from-green-400 to-blue-500">
-                        5+
-                    </h3>
-                    <p>Happy Clients</p>
-                </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
