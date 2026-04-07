@@ -28,11 +28,12 @@ const projects = [
     image: Portfolio,
     tags: ["Django", "DRF", "PostgreSQL"],
   },
+
 ];
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 md:py-32 bg-zinc-950 text-white relative overflow-hidden">
+    <section id="projects" className="py-24 md:py-20 bg-zinc-950 text-white relative overflow-hidden">
       {/* Background accent */}
       <div className="absolute inset-0 bg-[radial-gradient(at_top,#14b8a6_0%,transparent_70%)] opacity-5" />
 
@@ -113,24 +114,8 @@ export default function Projects() {
                   {project.description}
                 </p>
               </div>
-
-              {/* Bottom accent line */}
-              <div className="h-1 bg-gradient-to-r from-teal-400 via-cyan-400 to-transparent w-0 group-hover:w-full transition-all duration-500" />
             </div>
           ))}
-        </div>
-
-        {/* Optional "See more" button */}
-        <div className="text-center mt-16">
-          <a
-            href="https://github.com/Kip-tum1"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 border border-zinc-700 hover:border-teal-400 rounded-2xl text-zinc-300 hover:text-white transition-all duration-300 hover:bg-zinc-900 group"
-          >
-            See all projects on GitHub
-            <span className="group-hover:translate-x-1 transition-transform">→</span>
-          </a>
         </div>
       </div>
     </section>
